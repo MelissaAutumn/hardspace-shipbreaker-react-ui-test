@@ -1,0 +1,73 @@
+@import '../../assets/colour';
+@font-face {
+  font-family: 'Dogica';
+  src: url('../../assets/fonts/dogica/dogica.ttf') format('truetype');
+}
+
+// Colour cycles
+@keyframes barge-colour-change {
+  0% {
+    color: $LYNX-BARGE-DARK;
+    border-color: $LYNX-BARGE-DARK;
+  }
+  50% {
+    color: $LYNX-BARGE-BRIGHT;
+    border-color: $LYNX-BARGE-BRIGHT;
+  }
+  100% {
+    color: $LYNX-BARGE-DARK;
+    border-color: $LYNX-BARGE-DARK;
+  }
+}
+@keyframes furnace-colour-change {
+  0% {
+    color: $LYNX-FURNACE-DARK;
+    border-color: $LYNX-FURNACE-DARK;
+  }
+  50% {
+    color: $LYNX-FURNACE-BRIGHT;
+    border-color: $LYNX-FURNACE-BRIGHT;
+  }
+  100% {
+    color: $LYNX-FURNACE-DARK;
+    border-color: $LYNX-FURNACE-DARK;
+  }
+}
+@keyframes processor-colour-change {
+  0% {
+    color: $LYNX-PROCESSOR-DARK;
+    border-color: $LYNX-PROCESSOR-DARK;
+  }
+  50% {
+    color: $LYNX-PROCESSOR-BRIGHT;
+    border-color: $LYNX-PROCESSOR-BRIGHT;
+  }
+  100% {
+    color: $LYNX-PROCESSOR-DARK;
+    border-color: $LYNX-PROCESSOR-DARK;
+  }
+}
+
+.boxedLabel {
+  width: 200px;
+  display: table;
+
+  .label {
+    display: table-cell;
+    text-align: center;
+  }
+
+  padding: 4px;
+  font-family: 'Dogica', serif;
+  color: white;
+  border: 2px solid $LYNX-WARNING;
+  &.barge {
+    animation: barge-colour-change 1s infinite;
+  }
+  &.furnace {
+    animation: furnace-colour-change 1s infinite;
+  }
+  &.processor {
+    animation: processor-colour-change 1s infinite;
+  }
+}
