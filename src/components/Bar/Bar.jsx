@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Bar.scss';
+import {Border} from '../Border/Border';
 
 /**
  * Primary UI component for user interaction
@@ -11,9 +12,9 @@ export const Bar = ({ label, labelPosition, barType, ...props }) => {
         <span className="bar">
             <label>
                 {labelPosition === 'left' && <span className="label-left">{label}</span>}
-                <span className="progress-container">
+                <Border className="progress-container">
                     {barType === 'solid' && <progress className="progress"  {...props}/>}
-                </span>
+                </Border>
                 {labelPosition === 'right' && <span className="label-right">{label}</span>}
             </label>
         </span>

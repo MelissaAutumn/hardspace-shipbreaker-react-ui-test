@@ -38,21 +38,6 @@ progress[value]::-moz-progress-bar {
   // <progress/> doesn't support ::before/::after, so here's a container div
   .progress-container {
     color: $LYNX-YELLOW;
-    &::before {
-      content: '[';
-      font-size: 24pt;
-      font-family: "Open Sans Condensed Light", serif;
-      margin-right: 2px;
-    }
-    &::after {
-      content: ']';
-      font-size: 24pt;
-      font-family: "Open Sans Condensed Light", serif;
-      margin-left: 2px;
-    }
-    .pip {
-      content: '█'
-    }
   }
 
 

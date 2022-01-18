@@ -8,7 +8,7 @@ import './BoxedLabel.scss';
 export const BoxedLabel = ({ label, specialType, ...props }) => {
     return (
         <span
-            className={['boxedLabel', specialType].join(' ')}
+            className={['boxed-label', specialType].join(' ')}
             {...props}
         >
             <span className='label'>{label}</span>

@@ -1,0 +1,19 @@
+@import '../../assets/colour';
+@font-face {
+  font-family: 'Dogica';
+  src: url('../../assets/fonts/dogica/dogica.ttf') format('truetype');
+}
+
+.button-prompt {
+  background-color: $LYNX-OFF-WHITE;
+  border-radius: 2px;
+  width: 32px;
+  height: 32px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  .label {
+    font-family: 'Dogica', serif;
+    color: $LYNX-OFF-WHITE2;
+  }
+}
