@@ -1,8 +1,4 @@
-@import '../../assets/colour';
-@font-face {
-  font-family: 'Dogica';
-  src: url('../../assets/fonts/dogica/dogica.ttf') format('truetype');
-}
+@import '../../assets/sass/common';
 
 // Colour cycles
 @keyframes barge-colour-change {

@@ -1,14 +1,12 @@
-@import '../../assets/colour';
-@font-face {
-  font-family: 'Dogica';
-  src: url('../../assets/fonts/dogica/dogica.ttf') format('truetype');
-}
+@import '../../assets/sass/common';
 
 .button-prompt {
   background-color: $LYNX-OFF-WHITE;
   border-radius: 2px;
-  width: 32px;
-  height: 32px;
+
+  width: 28px;
+  height: 28px;
+  font-size: 10pt;
   display: table-cell;
   text-align: center;
   vertical-align: middle;
