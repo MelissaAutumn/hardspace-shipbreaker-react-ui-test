@@ -19,6 +19,8 @@ export const Bar = (
         dangerPipCount,
         maxPips,
         className,
+        hasLabel,
+        hasBorder,
         ...props
     }) => {
     // Make sure the progress bar doesn't exceed `progressBarWidth`,
@@ -30,7 +32,6 @@ export const Bar = (
     let pipDivs = [];
 
     if (barType === 'pips') {
-
         const divsLeftToPrint = maxPips - dangerPipCount;
         pipDivs = Array(dangerPipCount).fill(<div className='progress-value-pips danger-pip'/>);
         if (divsLeftToPrint > 0) {
@@ -38,12 +39,21 @@ export const Bar = (
         }
     }
 
-    console.log(pipDivs);
+    let labelClassName = ['bar-label'];
+    let borderClassName = ['bar-border', 'progress-container'];
+
+    if (hasLabel) {
+        labelClassName.push('show');
+    }
+    if (hasBorder) {
+        borderClassName.push('show');
+    }
+
     return (
         <span className={['bar', className].join(' ')}>
-            <label>
-                {labelPosition === 'left' && <span className="label-left">{label}</span>}
-                <Border className="progress-container">
+            <label className={labelClassName.join(' ')}>
+                {hasLabel && labelPosition === 'left' && <span className="label-left">{label}</span>}
+                <Border className={borderClassName.join(' ')}>
                     {/* barType === 'solid' && <progress className="progress"  {...props}/> */}
 
                     <div className="progress-bar" style={{width: progressBarWidth}}>
@@ -52,7 +62,7 @@ export const Bar = (
                     </div>
 
                 </Border>
-                {labelPosition === 'right' && <span className="label-right">{label}</span>}
+                {hasLabel && labelPosition === 'right' && <span className="label-right">{label}</span>}
             </label>
         </span>
     );
@@ -81,6 +91,9 @@ Bar.propTypes = {
     labelPosition: PropTypes.oneOf(['left', 'right']),
 
     barType: PropTypes.oneOf(['solid', 'pips']),
+
+    hasBorder: PropTypes.bool,
+    hasLabel: PropTypes.bool,
 };
 
 Bar.defaultProps = {
@@ -93,4 +106,7 @@ Bar.defaultProps = {
     label: '',
     labelPosition: 'left',
     barType: 'solid',
+
+    hasLabel: true,
+    hasBorder: true,
 };

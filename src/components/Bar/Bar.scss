@@ -1,6 +1,7 @@
 @import '../../assets/sass/common';
 
 .progress-bar {
+  visibility: visible;
   display: inline-block;
   width: 172px;
   height: 22px;
@@ -30,10 +31,14 @@
 .bar {
   min-width: 300px;
 
-  label {
+  .bar-label {
+    visibility: hidden;
     display:block;
     color: white;
     font-family: 'Dogica', serif;
+  }
+  .bar-border {
+    visibility: hidden;
   }
 
   .label-left {
