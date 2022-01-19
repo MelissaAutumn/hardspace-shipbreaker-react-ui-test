@@ -26,7 +26,10 @@
 
 
 .bar {
+  min-width: 300px;
+
   label {
+    display:block;
     color: white;
     font-family: 'Dogica', serif;
   }

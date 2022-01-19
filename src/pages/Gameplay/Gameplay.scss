@@ -1,0 +1,30 @@
+@import '../../assets/sass/common';
+
+.background {
+  background-image: url('../../assets/images/gameplay-bg.jpg');
+  width: 2560px;
+  height: 1440px;
+
+  .player-status {
+    position: absolute;
+    left: 1000px;
+    top: 1275px;
+
+    display: block;
+    width: 600px;
+    height: 100px;
+
+    .player-left {
+      display: flex;
+      float: left;
+    }
+    .player-right {
+      display: flex;
+      float: right;
+    }
+    &::after {
+      clear:both;
+    }
+  }
+
+}

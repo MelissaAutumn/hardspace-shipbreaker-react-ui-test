@@ -18,6 +18,7 @@ export const Bar = (
         pipWidth,
         dangerPipCount,
         maxPips,
+        className,
         ...props
     }) => {
     // Make sure the progress bar doesn't exceed `progressBarWidth`,
@@ -39,7 +40,7 @@ export const Bar = (
 
     console.log(pipDivs);
     return (
-        <span className="bar">
+        <span className={['bar', className].join(' ')}>
             <label>
                 {labelPosition === 'left' && <span className="label-left">{label}</span>}
                 <Border className="progress-container">
