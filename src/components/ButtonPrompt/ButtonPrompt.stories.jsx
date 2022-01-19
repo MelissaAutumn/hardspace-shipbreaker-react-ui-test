@@ -20,5 +20,5 @@ const Template = (args) => <ButtonPrompt {...args} />;
 export const Respect = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Respect.args = {
-  label: 'F' // To pay respects
+  prompt: 'F' // To pay respects
 };

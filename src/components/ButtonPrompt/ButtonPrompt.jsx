@@ -6,21 +6,40 @@ import {Border} from "../Border/Border";
 /**
  * Primary UI component for user interaction
  */
-export const ButtonPrompt = ({ label, ...props }) => {
+export const ButtonPrompt = ({label, prompt, hasBanner, hasLabel, ...props}) => {
+    let labelClassName = ["button-prompt-label"];
+    let borderClassName = ["button-prompt-border"];
+
+    if (hasLabel) {
+        labelClassName.push('show');
+    }
+    if (hasBanner) {
+        borderClassName.push('show');
+    }
+
     return (
-        <Border className="button-prompt-border">
-            <div className="button-prompt" {...props}>
-                <span className="label">{label}</span>
-            </div>
-        </Border>
+        <label className={labelClassName.join(" ")}>
+            {hasLabel && label}
+            <Border className={borderClassName.join(" ")}>
+                <div className="button-prompt" {...props} >
+                    <span className="prompt">{prompt}</span>
+                </div>
+            </Border>
+        </label>
     );
 };
 
 ButtonPrompt.propTypes = {
     // Label for the ButtonPrompt
     label: PropTypes.string,
+    prompt: PropTypes.string,
+    hasBanner: PropTypes.bool,
+    hasLabel: PropTypes.bool,
 };
 
 ButtonPrompt.defaultProps = {
-    label: '',
+    label: 'PAY RESPECT',
+    prompt: 'F',
+    hasBanner: true,
+    hasLabel: true,
 };

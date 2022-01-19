@@ -1,5 +1,20 @@
 @import '../../assets/sass/common';
 
+.button-prompt-border {
+  visibility: hidden;
+}
+
+.button-prompt-label {
+  visibility: hidden;
+  display:block;
+  color: white;
+  font-family: 'Dogica', serif;
+}
+
+.show {
+  visibility: visible;
+}
+
 .button-prompt {
   background-color: $LYNX-OFF-WHITE;
   border-radius: 2px;
@@ -10,8 +25,10 @@
   display: table-cell;
   text-align: center;
   vertical-align: middle;
-  .label {
+  visibility: visible;
+  .prompt {
     font-family: 'Dogica', serif;
     color: $LYNX-OFF-WHITE2;
   }
+
 }
