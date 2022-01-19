@@ -6,14 +6,14 @@ import {Border} from "../Border/Border";
 /**
  * Primary UI component for user interaction
  */
-export const ButtonPrompt = ({label, prompt, hasBanner, hasLabel, ...props}) => {
+export const ButtonPrompt = ({label, prompt, hasBorder, hasLabel, ...props}) => {
     let labelClassName = ["button-prompt-label"];
     let borderClassName = ["button-prompt-border"];
 
     if (hasLabel) {
         labelClassName.push('show');
     }
-    if (hasBanner) {
+    if (hasBorder) {
         borderClassName.push('show');
     }
 
@@ -33,13 +33,13 @@ ButtonPrompt.propTypes = {
     // Label for the ButtonPrompt
     label: PropTypes.string,
     prompt: PropTypes.string,
-    hasBanner: PropTypes.bool,
+    hasBorder: PropTypes.bool,
     hasLabel: PropTypes.bool,
 };
 
 ButtonPrompt.defaultProps = {
-    label: 'PAY RESPECT',
+    label: '',
     prompt: 'F',
-    hasBanner: true,
-    hasLabel: true,
+    hasBorder: true,
+    hasLabel: false,
 };

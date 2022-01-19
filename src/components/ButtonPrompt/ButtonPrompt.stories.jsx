@@ -20,5 +20,22 @@ const Template = (args) => <ButtonPrompt {...args} />;
 export const Respect = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Respect.args = {
-  prompt: 'F' // To pay respects
+  label: 'PAY RESPECT',
+  prompt: 'F'
+};
+
+export const NoLabel = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+NoLabel.args = {
+  prompt: '?',
+  hasLabel: false,
+};
+
+export const NoBorder = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+NoBorder.args = {
+  label: 'GET EXCITED',
+  prompt: '!',
+  hasBorder: false,
+  hasLabel: true,
 };
