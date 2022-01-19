@@ -21,20 +21,20 @@ const Template = (args) => <Bar {...args} />;
 export const LeftHandLabel = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 LeftHandLabel.args = {
-  value: 50,
+  currentValue: 50,
   label: 'HLTH',
 };
 
 export const RightHandLabel = Template.bind({});
 RightHandLabel.args = {
-  value: 100,
+  currentValue: 100,
   label: 'FUEL',
   labelPosition: 'right'
 };
 
-// TODO
 export const Pips = Template.bind({});
 Pips.args = {
-  value: 75,
+  currentValue: 75,
   label: 'SUIT',
+  barType: 'pips',
 };

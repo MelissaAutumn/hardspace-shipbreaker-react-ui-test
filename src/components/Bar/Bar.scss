@@ -1,37 +1,44 @@
 @import '../../assets/sass/common';
 
-progress[value] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-
+.progress-bar {
+  display: inline-block;
   width: 172px;
   height: 22px;
-  // Default HS-SB colours
-  background-color: $LYNX-DARK;
-};
 
-progress[value]::-webkit-progress-bar {
-  background-color: $LYNX-YELLOW;
+  .progress-value {
+    width: 0; // Default!
+    background-color: $LYNX-YELLOW;
+    height: 100%;
+  }
+
+  .progress-value-pips {
+    width: 10px;
+    height: 22px;
+    margin-right: 2px;
+    background-color: $LYNX-YELLOW;
+    display: inline-block;
+
+    &.danger-pip {
+      background-color: $LYNX-WARNING;
+    }
+  }
 }
-progress[value]::-moz-progress-bar {
-  background-color: $LYNX-YELLOW;
-}
+
 
 .bar {
   label {
     color: white;
     font-family: 'Dogica', serif;
   }
+
   .label-left {
     margin-right: 16px;
   }
+
   .label-right {
     margin-left: 16px;
   }
 
-  // <progress/> doesn't support ::before/::after, so here's a container div
   .progress-container {
     color: $LYNX-YELLOW;
   }
