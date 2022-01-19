@@ -2,3 +2,12 @@
 // Import commonly used modules
 @import './modules/colour';
 @import './modules/fonts';
+
+// Some commonly used classes
+
+.show {
+  visibility: visible !important;
+}
+.hide {
+  visibility: hidden !important;
+}

@@ -6,13 +6,9 @@
 
 .button-prompt-label {
   visibility: hidden;
-  display:block;
+  display: block;
   color: white;
   font-family: 'Dogica', serif;
-}
-
-.show {
-  visibility: visible;
 }
 
 .button-prompt {
@@ -26,6 +22,7 @@
   text-align: center;
   vertical-align: middle;
   visibility: visible;
+
   .prompt {
     font-family: 'Dogica', serif;
     color: $LYNX-OFF-WHITE2;
