@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Gameplay.scss';
 import {Bar} from "../../components/Bar/Bar";
+import {BoxedLabel} from "../../components/BoxedLabel/BoxedLabel";
 
 /**
  * Primary UI component for user interaction
@@ -9,6 +10,9 @@ import {Bar} from "../../components/Bar/Bar";
 export const Gameplay = ({label, ...props}) => {
     return (
         <div className="background">
+            <div className="salvage-info">
+                <BoxedLabel label="PROCESSOR" specialType="processor"/>
+            </div>
             <div className="player-status">
                 <Bar className="player-left" label="HLTH" currentValue={100}/>
                 <Bar className="player-right" label="FUEL" currentValue={100} labelPosition="right"/>

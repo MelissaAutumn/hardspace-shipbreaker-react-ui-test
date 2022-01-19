@@ -5,6 +5,17 @@
   width: 2560px;
   height: 1440px;
 
+  .salvage-info {
+    position: absolute;
+    left: 1020px;
+    top: 930px;
+    width: 530px;
+    margin: 0 auto;
+    .boxed-label {
+      margin: auto;
+    }
+  }
+  
   .player-status {
     position: absolute;
     left: 1000px;
