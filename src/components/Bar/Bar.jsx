@@ -5,7 +5,6 @@ import {Border} from '../Border/Border';
 
 /**
  * Primary UI component for user interaction
- * TODO: Re-write to use a div instead of progress, so we can have barred progress along-side solid progress!
  */
 export const Bar = (
     {
@@ -54,8 +53,6 @@ export const Bar = (
             <label className={labelClassName.join(' ')}>
                 {hasLabel && labelPosition === 'left' && <span className="label-left">{label}</span>}
                 <Border className={borderClassName.join(' ')}>
-                    {/* barType === 'solid' && <progress className="progress"  {...props}/> */}
-
                     <div className="progress-bar" style={{width: progressBarWidth}}>
                         {barType === 'solid' && <div className='progress-value' style={{width: valueWidth}}/>}
                         {barType === 'pips' && pipDivs}

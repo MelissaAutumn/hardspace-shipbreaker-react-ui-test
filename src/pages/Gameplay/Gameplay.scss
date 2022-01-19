@@ -15,7 +15,23 @@
       margin: auto;
     }
   }
-  
+
+  .left-button-prompts {
+    position:absolute;
+    left: 500px;
+    top: 1275px;
+
+    // Align by the prompt (a lil' hacky)
+    text-align: right;
+
+  }
+
+  .right-button-prompts {
+    position:absolute;
+    left: 1875px;
+    top: 1240px;
+  }
+
   .player-status {
     position: absolute;
     left: 1000px;

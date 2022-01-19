@@ -17,12 +17,21 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template = (args) => <ButtonPrompt {...args} />;
 
-export const Respect = Template.bind({});
+export const LeftLabel = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Respect.args = {
+LeftLabel.args = {
   label: 'PAY RESPECT',
   prompt: 'F'
 };
+
+export const RightLabel = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+RightLabel.args = {
+  label: 'MODE SWAP',
+  prompt: 'V',
+  labelPosition: 'right',
+};
+
 
 export const NoLabel = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args

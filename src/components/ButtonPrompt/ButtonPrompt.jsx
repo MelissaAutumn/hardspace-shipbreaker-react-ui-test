@@ -6,7 +6,7 @@ import {Border} from "../Border/Border";
 /**
  * Primary UI component for user interaction
  */
-export const ButtonPrompt = ({label, prompt, hasBorder, hasLabel, ...props}) => {
+export const ButtonPrompt = ({label, prompt, hasBorder, hasLabel, labelPosition, ...props}) => {
     let labelClassName = ["button-prompt-label"];
     let borderClassName = ["button-prompt-border"];
 
@@ -19,12 +19,13 @@ export const ButtonPrompt = ({label, prompt, hasBorder, hasLabel, ...props}) => 
 
     return (
         <label className={labelClassName.join(" ")}>
-            {hasLabel && label}
+            {hasLabel && labelPosition === 'left' && label}
             <Border className={borderClassName.join(" ")}>
                 <div className="button-prompt" {...props} >
                     <span className="prompt">{prompt}</span>
                 </div>
             </Border>
+            {hasLabel && labelPosition === 'right' && label}
         </label>
     );
 };
@@ -33,6 +34,8 @@ ButtonPrompt.propTypes = {
     // Label for the ButtonPrompt
     label: PropTypes.string,
     prompt: PropTypes.string,
+    labelPosition: PropTypes.oneOf(['left', 'right']),
+
     hasBorder: PropTypes.bool,
     hasLabel: PropTypes.bool,
 };
@@ -40,6 +43,7 @@ ButtonPrompt.propTypes = {
 ButtonPrompt.defaultProps = {
     label: '',
     prompt: 'F',
+    labelPosition: 'left',
     hasBorder: true,
-    hasLabel: false,
+    hasLabel: true,
 };
