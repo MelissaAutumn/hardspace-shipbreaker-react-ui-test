@@ -2,6 +2,20 @@
 
 .button-prompt-border {
   visibility: hidden;
+
+  &.left {
+    margin-left: 10px;
+  }
+  &.right {
+    margin-right: 10px;
+  }
+
+  &::before {
+    height: 32px;
+  }
+  &::after {
+    height: 32px;
+  }
 }
 
 .button-prompt-label {
@@ -9,6 +23,7 @@
   display: block;
   color: white;
   font-family: 'Dogica', serif;
+
 }
 
 .button-prompt {
@@ -27,5 +42,4 @@
     font-family: 'Dogica', serif;
     color: $LYNX-OFF-WHITE2;
   }
-
 }

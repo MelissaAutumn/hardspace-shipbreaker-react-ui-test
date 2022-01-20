@@ -9,23 +9,30 @@ import {Border} from "../Border/Border";
 export const ButtonPrompt = ({label, prompt, hasBorder, hasLabel, labelPosition, ...props}) => {
     let labelClassName = ["button-prompt-label"];
     let borderClassName = ["button-prompt-border"];
+    const isLabelPositionedLeft = labelPosition === 'left';
 
     if (hasLabel) {
         labelClassName.push('show');
     }
     if (hasBorder) {
         borderClassName.push('show');
+
+        if (isLabelPositionedLeft) {
+            borderClassName.push('left');
+        } else {
+            borderClassName.push('right');
+        }
     }
 
     return (
         <label className={labelClassName.join(" ")}>
-            {hasLabel && labelPosition === 'left' && label}
+            {hasLabel && isLabelPositionedLeft && label}
             <Border className={borderClassName.join(" ")}>
                 <div className="button-prompt" {...props} >
                     <span className="prompt">{prompt}</span>
                 </div>
             </Border>
-            {hasLabel && labelPosition === 'right' && label}
+            {hasLabel && !isLabelPositionedLeft && label}
         </label>
     );
 };
