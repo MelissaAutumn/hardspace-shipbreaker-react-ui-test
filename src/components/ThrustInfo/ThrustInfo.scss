@@ -1,0 +1,29 @@
+@import '../../assets/sass/common';
+
+.thrust-info {
+  color: $LYNX-OFF-WHITE;
+  font-family: Dogica, monospace;
+
+  .small-text {
+    font-size: 10pt;
+  }
+  .bar-wrapper {
+
+
+    .bar {
+      vertical-align: top;
+      display:inline-block;
+      .progress-bar .progress-value-pips {
+        border: black 2px solid;
+        margin: 0;
+        height: 8px;
+        width: 18px;
+      }
+      .label-right {
+        color: $LYNX-OFF-WHITE;
+        vertical-align: top;
+        margin: 0;
+      }
+    }
+  }
+}
