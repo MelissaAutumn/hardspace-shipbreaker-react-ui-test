@@ -7,19 +7,21 @@ import {ButtonPrompt} from "../ButtonPrompt/ButtonPrompt";
 /**
  * Primary UI component for user interaction
  */
-export const ToolInfo = ({label, prompt, hasBorder, hasLabel, labelPosition, ...props}) => {
+export const ToolInfo = ({...props}) => {
     return (
         <div className='tool-info'>
 
             <ButtonPrompt hasBorder={false} labelPosition="right" label="MODE SWAP" prompt="V"/>
 
             <span className='temp-bar-wrapper'>
-                <Bar className='temp-bar' label='CUTTER TEMP' barType='pips' maxPips={4} progressBarWidth={250} dangerPipCount={0}/>
+                <Bar className='temp-bar' label='CUTTER TEMP' barType='pips' maxPips={4} progressBarWidth={250}
+                     dangerPipCount={0}/>
             </span>
 
             <span className='bar-wrapper'>
                 <span>+</span>
-                <Bar hasBorder={false} labelPosition="right" barType='pips' maxPips='4' dangerPipCount={0} progressBarWidth={90} label='100%'/>
+                <Bar hasBorder={false} labelPosition="right" barType='pips' maxPips='4' dangerPipCount={0}
+                     progressBarWidth={90} label='100%'/>
             </span>
             <span className='tool-name'>
                 <span className='fancy-border'/>

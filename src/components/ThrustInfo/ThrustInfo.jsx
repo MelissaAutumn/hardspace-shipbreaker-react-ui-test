@@ -7,14 +7,15 @@ import {ButtonPrompt} from "../ButtonPrompt/ButtonPrompt";
 /**
  * Primary UI component for user interaction
  */
-export const ThrustInfo = ({label, prompt, hasBorder, hasLabel, labelPosition, ...props}) => {
+export const ThrustInfo = ({...props}) => {
     return (
         <div className='thrust-info'>
             <p>0.<span className='small-text'>00 M/S</span></p>
             <p>THRUSTERS</p>
             <span className='bar-wrapper'>
                 <span>+</span>
-                <Bar hasBorder={false} labelPosition="right" barType='pips' maxPips='4' dangerPipCount={0} progressBarWidth={90} label='100%'/>
+                <Bar hasBorder={false} labelPosition="right" barType='pips' maxPips='4' dangerPipCount={0}
+                     progressBarWidth={90} label='100%'/>
             </span>
         </div>
     )

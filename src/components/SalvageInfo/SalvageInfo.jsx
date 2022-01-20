@@ -7,13 +7,7 @@ import {Bar} from "../Bar/Bar";
 /**
  * Primary UI component for user interaction
  */
-export const SalvageInfo = ({label, prompt, hasBorder, hasLabel, labelPosition, ...props}) => {
-    let borderClassName = ['panel-border', 'hide'];
-
-    if (hasBorder) {
-        borderClassName = ['panel-border', 'show'];
-    }
-
+export const SalvageInfo = ({...props}) => {
     return (
         <Panel className="panel salvage-info">
             <p className='header'>PANEL   ( NANOCARBON )</p>
@@ -25,9 +19,9 @@ export const SalvageInfo = ({label, prompt, hasBorder, hasLabel, labelPosition, 
 };
 
 SalvageInfo.propTypes = {
-    hasBorder: PropTypes.bool,
+
 };
 
 SalvageInfo.defaultProps = {
-    hasBorder: true,
+
 };

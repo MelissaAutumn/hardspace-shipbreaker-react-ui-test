@@ -7,7 +7,7 @@ import {Bar} from "../Bar/Bar";
 /**
  * Primary UI component for user interaction
  */
-export const LevelInfo = ({label, prompt, hasBorder, hasLabel, labelPosition, ...props}) => {
+export const LevelInfo = ({...props}) => {
     const [timer, setTimer] = useState(0);
     const [timerInterval, setTimerInterval] = useState(null);
 

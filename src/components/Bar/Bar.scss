@@ -44,10 +44,14 @@
   }
 
   .label-left {
+    display: inline-block;
+    min-width: 54px;
     margin-right: 16px;
   }
 
   .label-right {
+    display: inline-block;
+    min-width: 54px;
     margin-left: 16px;
   }
 

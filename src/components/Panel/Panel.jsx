@@ -6,7 +6,7 @@ import {Border} from "../Border/Border";
 /**
  * Primary UI component for user interaction
  */
-export const Panel = ({label, prompt, hasBorder, hasLabel, labelPosition, ...props}) => {
+export const Panel = ({hasBorder, ...props}) => {
     let borderClassName = ['panel-border', 'hide'];
 
     if (hasBorder) {
@@ -16,7 +16,7 @@ export const Panel = ({label, prompt, hasBorder, hasLabel, labelPosition, ...pro
     return (
         <Border className={borderClassName.join(" ")}>
             <div className="panel" {...props} >
-                { props.children }
+                {props.children}
             </div>
         </Border>
     );
