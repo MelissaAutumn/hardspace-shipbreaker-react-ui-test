@@ -33,7 +33,7 @@ export const LevelInfo = ({label, prompt, hasBorder, hasLabel, labelPosition, ..
             <p className="timer">{formatTimer(timer)}</p>
             <span className="left">THE FREDDI MK V</span>
             <span className="right">HAZARD LEVEL 8 - MACKEREL - LIGHT CARGO</span>
-            <Bar className="exp-bar" hasLabel={false} progressBarWidth={1000} currentValue={100}/>
+            <Bar className="salvage-rating" hasLabel={false} progressBarWidth={1000} currentValue={100}/>
         </div>
     );
 };
