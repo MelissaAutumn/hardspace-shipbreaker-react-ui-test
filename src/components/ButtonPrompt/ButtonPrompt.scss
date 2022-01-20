@@ -19,15 +19,17 @@
 }
 
 .button-prompt-label {
+  display: block;
   visibility: hidden;
   color: white;
   font-family: 'Dogica', serif;
-
+  margin: 6px 0 6px 0;
 }
 
 .button-prompt {
   background-color: $LYNX-OFF-WHITE;
   border-radius: 2px;
+
 
   width: 28px;
   height: 28px;
