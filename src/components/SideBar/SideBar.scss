@@ -1,0 +1,35 @@
+@import '../../assets/sass/common';
+
+.side-bar {
+  width: 80px;
+  height: 560px;
+
+  vertical-align: top;
+
+  display: inline-block;
+  content: '';
+
+  border-top: $LYNX-YELLOW 1px solid;
+  border-bottom: $LYNX-YELLOW 1px solid;
+
+  &.left {
+    border-left: $LYNX-YELLOW 1px solid;
+  }
+  &.right {
+    // Cheat a little by using rtl rendering
+    direction: rtl;
+    unicode-bidi: bidi-override;
+
+    border-right: $LYNX-YELLOW 1px solid;
+  }
+
+  padding-top: 50px;
+
+  .mark {
+    display: block;
+    content: '';
+    border-top: $LYNX-YELLOW 1px solid;
+    width: 20px;
+    height: 45px;
+  }
+}

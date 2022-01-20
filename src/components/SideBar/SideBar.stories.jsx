@@ -1,10 +1,10 @@
 import React from 'react';
-import {LevelInfo} from "./LevelInfo";
+import {SideBar} from "./SideBar";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'UI Common/Level Info',
-  component: LevelInfo,
+  title: 'UI Common/Side Bar',
+  component: SideBar,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -15,9 +15,9 @@ export default {
 };
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template = (args) => <LevelInfo/>;
+const Template = (args) => <SideBar {...args} />;
 
-export const LevelInfoPanel = Template.bind({});
+export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-LevelInfoPanel.args = {
+Default.args = {
 };
