@@ -2,7 +2,7 @@
 
 .panel {
   background-color: $LYNX-DARK;
-  font-size: 12pt;
+  //font-size: 12pt;
   font-family: 'Dogica', serif;
   display: inline-block;
 
@@ -16,14 +16,12 @@
 
 .panel-border {
   &::before {
-    left: 8px;
-    top: 30px;
+    left: 10px;
     height: 78px;
   }
 
   &::after {
-    right: 8px;
-    top: 30px;
+    right: 10px;
     height: 78px;
   }
 }

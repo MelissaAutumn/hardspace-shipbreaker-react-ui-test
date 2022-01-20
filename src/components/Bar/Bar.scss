@@ -1,6 +1,7 @@
 @import '../../assets/sass/common';
 
 .progress-bar {
+  vertical-align: middle;
   visibility: visible;
   display: inline-block;
   width: 172px;
@@ -53,5 +54,13 @@
     color: $LYNX-YELLOW;
   }
 
-
+  .border {
+    &::before {
+      top: -4px;
+    }
+    &::after {
+      top: -4px;
+    }
+  }
 }
+

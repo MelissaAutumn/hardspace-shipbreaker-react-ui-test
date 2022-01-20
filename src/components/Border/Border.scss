@@ -4,6 +4,8 @@
   color: $LYNX-YELLOW;
 
   &::before {
+    vertical-align: top;
+
     display: inline-block;
     content: '';
 
@@ -12,14 +14,14 @@
     border-bottom: $LYNX-YELLOW 1px solid;
 
     position: relative;
-    top: 4px;
-
     height: 28px;
     width: 5px;
 
     margin-right: 4px;
   }
   &::after {
+    vertical-align: top;
+
     display: inline-block;
     content: '';
 
@@ -28,8 +30,6 @@
     border-bottom: $LYNX-YELLOW 1px solid;
 
     position: relative;
-    top: 4px;
-
     height: 28px;
     width: 5px;
 
