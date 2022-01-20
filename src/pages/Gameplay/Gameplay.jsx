@@ -5,6 +5,7 @@ import {Bar} from "../../components/Bar/Bar";
 import {BoxedLabel} from "../../components/BoxedLabel/BoxedLabel";
 import {ButtonPrompt} from "../../components/ButtonPrompt/ButtonPrompt";
 import {SalvageInfo} from "../../components/SalvageInfo/SalvageInfo";
+import {LevelInfo} from "../../components/LevelInfo/LevelInfo";
 
 /**
  * Primary UI component for user interaction
@@ -12,6 +13,9 @@ import {SalvageInfo} from "../../components/SalvageInfo/SalvageInfo";
 export const Gameplay = ({label, ...props}) => {
     return (
         <div className="background">
+            <div className="level-info-panel">
+                <LevelInfo/>
+            </div>
             <div className="salvage-info-panel">
                 <BoxedLabel label="PROCESSOR" specialType="processor"/>
                 <SalvageInfo />

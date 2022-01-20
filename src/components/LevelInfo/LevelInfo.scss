@@ -1,0 +1,33 @@
+@import '../../assets/sass/common';
+
+.level-info {
+  width: 1050px;
+  color: $LYNX-OFF-WHITE;
+  font-family: 'Dogica', monospace;
+  text-align: center;
+  .timer {
+    margin-bottom: 40px;
+  }
+  .left {
+    font-size: 10pt;
+    display: flex;
+    float:left;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  .right {
+    font-size: 10pt;
+    display: flex;
+    float:right;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  .exp-bar {
+    clear:both;
+    display: block; // FIXME: Why?
+    .progress-value {
+      background-color: $LYNX-DARK-TRANS;
+      border: $LYNX-YELLOW 1px solid;
+    }
+  }
+}
