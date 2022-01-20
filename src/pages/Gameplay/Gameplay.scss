@@ -10,14 +10,21 @@
     top: 400px;
     left: 115px;
   }
+
   .right-side-bar {
-    position:absolute;
+    position: absolute;
     top: 400px;
     left: 2360px;
   }
 
-  .level-info {
+  .thrust-info-panel {
     position:absolute;
+    top: 1010px;
+    left: 15px;
+  }
+
+  .level-info {
+    position: absolute;
     left: 770px;
   }
 
@@ -26,6 +33,7 @@
     left: 1000px;
     top: 890px;
     margin: 0 auto;
+
     .boxed-label {
       margin: 0 auto 10px auto;
 
@@ -33,7 +41,7 @@
   }
 
   .left-button-prompts {
-    position:absolute;
+    position: absolute;
     left: 500px;
     top: 1275px;
 
@@ -43,7 +51,7 @@
   }
 
   .right-button-prompts {
-    position:absolute;
+    position: absolute;
     left: 1875px;
     top: 1240px;
   }
@@ -61,12 +69,14 @@
       display: flex;
       float: left;
     }
+
     .player-right {
       display: flex;
       float: right;
     }
+
     &::after {
-      clear:both;
+      clear: both;
     }
   }
 

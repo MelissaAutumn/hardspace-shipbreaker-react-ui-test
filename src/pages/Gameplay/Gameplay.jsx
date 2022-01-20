@@ -7,6 +7,7 @@ import {ButtonPrompt} from "../../components/ButtonPrompt/ButtonPrompt";
 import {SalvageInfo} from "../../components/SalvageInfo/SalvageInfo";
 import {LevelInfo} from "../../components/LevelInfo/LevelInfo";
 import {SideBar} from "../../components/SideBar/SideBar";
+import {ThrustInfo} from "../../components/ThrustInfo/ThrustInfo";
 
 /**
  * Primary UI component for user interaction
@@ -16,6 +17,9 @@ export const Gameplay = ({label, ...props}) => {
         <div className="background">
             <div className="left-side-bar">
                 <SideBar position='left'/>
+            </div>
+            <div className="thrust-info-panel">
+                <ThrustInfo/>
             </div>
             <div className="level-info-panel">
                 <LevelInfo/>

@@ -3,14 +3,14 @@
 .thrust-info {
   color: $LYNX-OFF-WHITE;
   font-family: Dogica, monospace;
+  text-align: right;
 
   .small-text {
     font-size: 10pt;
   }
   .bar-wrapper {
-
-
     .bar {
+      min-width: 0;
       vertical-align: top;
       display:inline-block;
       .progress-bar .progress-value-pips {
