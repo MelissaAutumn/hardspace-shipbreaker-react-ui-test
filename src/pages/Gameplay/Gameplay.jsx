@@ -6,6 +6,7 @@ import {BoxedLabel} from "../../components/BoxedLabel/BoxedLabel";
 import {ButtonPrompt} from "../../components/ButtonPrompt/ButtonPrompt";
 import {SalvageInfo} from "../../components/SalvageInfo/SalvageInfo";
 import {LevelInfo} from "../../components/LevelInfo/LevelInfo";
+import {SideBar} from "../../components/SideBar/SideBar";
 
 /**
  * Primary UI component for user interaction
@@ -13,6 +14,9 @@ import {LevelInfo} from "../../components/LevelInfo/LevelInfo";
 export const Gameplay = ({label, ...props}) => {
     return (
         <div className="background">
+            <div className="left-side-bar">
+                <SideBar position='left'/>
+            </div>
             <div className="level-info-panel">
                 <LevelInfo/>
             </div>
@@ -23,7 +27,6 @@ export const Gameplay = ({label, ...props}) => {
             <div className="left-button-prompts">
                 <ButtonPrompt label="SCANNER" prompt="T"/>
                 <ButtonPrompt label="HELMET LIGHT" prompt="5"/>
-
             </div>
             <div className="player-status">
                 <Bar className="player-left" label="HLTH" currentValue={100}/>
@@ -35,6 +38,9 @@ export const Gameplay = ({label, ...props}) => {
                 <div style={{position: "relative"}}>
                 <ButtonPrompt labelPosition="right" label="MODE SWAP" prompt="V"/>
                 </div>
+            </div>
+            <div className="right-side-bar">
+                <SideBar position='right'/>
             </div>
         </div>
     );

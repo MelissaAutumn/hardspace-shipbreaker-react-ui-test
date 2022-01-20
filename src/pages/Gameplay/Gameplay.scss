@@ -5,6 +5,17 @@
   width: 2560px;
   height: 1440px;
 
+  .left-side-bar {
+    position: absolute;
+    top: 400px;
+    left: 115px;
+  }
+  .right-side-bar {
+    position:absolute;
+    top: 400px;
+    left: 2360px;
+  }
+
   .level-info {
     position:absolute;
     left: 770px;

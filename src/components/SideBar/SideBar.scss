@@ -12,10 +12,12 @@
   border-top: $LYNX-YELLOW 1px solid;
   border-bottom: $LYNX-YELLOW 1px solid;
 
-  &.left {
+  // Facing right.. or facing left...
+  // Not related to screen placing!!
+  &.right {
     border-left: $LYNX-YELLOW 1px solid;
   }
-  &.right {
+  &.left {
     // Cheat a little by using rtl rendering
     direction: rtl;
     unicode-bidi: bidi-override;
