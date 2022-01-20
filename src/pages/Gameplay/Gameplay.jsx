@@ -8,6 +8,7 @@ import {SalvageInfo} from "../../components/SalvageInfo/SalvageInfo";
 import {LevelInfo} from "../../components/LevelInfo/LevelInfo";
 import {SideBar} from "../../components/SideBar/SideBar";
 import {ThrustInfo} from "../../components/ThrustInfo/ThrustInfo";
+import {ToolInfo} from "../../components/ToolInfo/ToolInfo";
 
 /**
  * Primary UI component for user interaction
@@ -39,12 +40,13 @@ export const Gameplay = ({label, ...props}) => {
                 <Bar className="player-right" label="O2" currentValue={100} labelPosition="right"/>
             </div>
             <div className="right-button-prompts">
-                <div style={{position: "relative"}}>
-                <ButtonPrompt labelPosition="right" label="MODE SWAP" prompt="V"/>
-                </div>
+                <ToolInfo/>
             </div>
             <div className="right-side-bar">
                 <SideBar position='right'/>
+            </div>
+            <div className='unpressurized-warning'>
+                <BoxedLabel specialType={null} label='UNPRESSURIZED' />
             </div>
         </div>
     );

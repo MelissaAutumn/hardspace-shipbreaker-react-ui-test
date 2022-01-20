@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './ThrustInfo.scss';
-import {Panel} from "../Panel/Panel";
 import {Bar} from "../Bar/Bar";
+import {ButtonPrompt} from "../ButtonPrompt/ButtonPrompt";
 
 /**
  * Primary UI component for user interaction
@@ -14,7 +14,7 @@ export const ThrustInfo = ({label, prompt, hasBorder, hasLabel, labelPosition, .
             <p>THRUSTERS</p>
             <span className='bar-wrapper'>
                 <span>+</span>
-                <Bar hasBorder={false} labelPosition="right" barType='pips' maxPips='4' progressBarWidth={90} label='100%'/>
+                <Bar hasBorder={false} labelPosition="right" barType='pips' maxPips='4' dangerPipCount={0} progressBarWidth={90} label='100%'/>
             </span>
         </div>
     )

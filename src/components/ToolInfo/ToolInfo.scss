@@ -1,0 +1,88 @@
+@import '../../assets/sass/common';
+
+.tool-info {
+  color: $LYNX-OFF-WHITE;
+  font-family: Dogica, monospace;
+  text-align: left;
+
+  .tool-name {
+    p {
+      margin: 0;
+    }
+
+    .fancy-border {
+      position: relative;
+      top: -15px;
+      display: block;
+      content: '';
+      height: 4px;
+      width: 190px;
+
+      border: $LYNX-YELLOW 1px solid;
+      border-top: 0;
+
+    }
+  }
+
+  .temp-bar-wrapper {
+    .border {
+      &::before {
+        left: 10px;
+        top: 0;
+        height: 24px;
+      }
+
+      &::after {
+        right: 22px;
+        top: 0;
+        height: 24px;
+      }
+    }
+
+    display: block;
+    margin-bottom: 10px;
+
+    .bar {
+      min-height: 30px;
+      min-width: 0;
+      vertical-align: top;
+      display: inline-block;
+
+      .progress-bar .progress-value-pips {
+        background-color: $LYNX-DARK-TRANS;
+        border: black 2px solid;
+        margin: 0;
+        height: 22px;
+        width: 55px;
+      }
+
+      .label-left {
+        color: $LYNX-OFF-WHITE;
+        vertical-align: middle;
+        margin: 0;
+      }
+    }
+  }
+
+
+  .bar-wrapper {
+    .bar {
+      min-height: 30px;
+      vertical-align: top;
+      display: inline-block;
+
+      .progress-bar .progress-value-pips {
+        border: black 2px solid;
+        margin: 0;
+        height: 8px;
+        width: 18px;
+      }
+
+      .label-right {
+        color: $LYNX-OFF-WHITE;
+        vertical-align: top;
+        margin: 0;
+      }
+    }
+  }
+}
