@@ -2,16 +2,41 @@
 
 .border {
   color: $LYNX-YELLOW;
+
   &::before {
-    content: '[';
-    font-size: 24pt;
-    font-family: "Open Sans Condensed Light", serif;
-    margin-right: 2px;
+    display: inline-block;
+    content: '';
+
+    border-left: $LYNX-YELLOW 1px solid;
+    border-top: $LYNX-YELLOW 1px solid;
+    border-bottom: $LYNX-YELLOW 1px solid;
+
+    position: relative;
+    top: 4px;
+
+    height: 28px;
+    width: 5px;
+
+    margin-right: 4px;
   }
   &::after {
-    content: ']';
-    font-size: 24pt;
-    font-family: "Open Sans Condensed Light", serif;
-    margin-left: 2px;
+    display: inline-block;
+    content: '';
+
+    border-right: $LYNX-YELLOW 1px solid;
+    border-top: $LYNX-YELLOW 1px solid;
+    border-bottom: $LYNX-YELLOW 1px solid;
+
+    position: relative;
+    top: 4px;
+
+    height: 28px;
+    width: 5px;
+
+    margin-left: 4px;
   }
+
+
+
+
 }
