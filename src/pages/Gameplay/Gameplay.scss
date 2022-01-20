@@ -5,14 +5,14 @@
   width: 2560px;
   height: 1440px;
 
-  .salvage-info {
+  .salvage-info-panel {
     position: absolute;
-    left: 1020px;
-    top: 930px;
-    width: 530px;
+    left: 1000px;
+    top: 890px;
     margin: 0 auto;
     .boxed-label {
-      margin: auto;
+      margin: 0 auto 10px auto;
+
     }
   }
 

@@ -4,6 +4,7 @@ import './Gameplay.scss';
 import {Bar} from "../../components/Bar/Bar";
 import {BoxedLabel} from "../../components/BoxedLabel/BoxedLabel";
 import {ButtonPrompt} from "../../components/ButtonPrompt/ButtonPrompt";
+import {SalvageInfo} from "../../components/SalvageInfo/SalvageInfo";
 
 /**
  * Primary UI component for user interaction
@@ -11,8 +12,9 @@ import {ButtonPrompt} from "../../components/ButtonPrompt/ButtonPrompt";
 export const Gameplay = ({label, ...props}) => {
     return (
         <div className="background">
-            <div className="salvage-info">
+            <div className="salvage-info-panel">
                 <BoxedLabel label="PROCESSOR" specialType="processor"/>
+                <SalvageInfo />
             </div>
             <div className="left-button-prompts">
                 <ButtonPrompt label="SCANNER" prompt="T"/>

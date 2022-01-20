@@ -1,1 +1,66 @@
 @import '../../assets/sass/common';
+
+.salvage-info {
+
+  p {
+    margin: 5px 0;
+    font-size: 10pt;
+    white-space: pre;
+  }
+  .header {
+    color: $LYNX-YELLOW;
+  }
+  .weight {
+    color: $LYNX-OFF-WHITE;
+  }
+  .cut-lvl {
+    font-size: 10pt;
+    .label-left {
+      color: $LYNX-OFF-WHITE;
+      margin-right: 0;
+    }
+    .progress-bar .progress-value-pips {
+      height: 16px;
+      width: 16px;
+      background-color: transparent;
+      border: $LYNX-CUT-LVL-BORDER 1px solid;
+      &.danger-pip {
+        background-color: $LYNX-CUT-LVL-1;
+      }
+      // Cheat a little with a css override
+      &.danger-pip:nth-child(2) {
+        background-color: $LYNX-CUT-LVL-2;
+      }
+    }
+  }
+  .cutter-temp {
+    position: relative;
+
+    top: -45px;
+    left: 375px;
+
+    .border {
+      // Before border is now the that little like 10% line
+      &::before {
+        border-top: 0;
+        border-bottom: 0;
+        border-left: $LYNX-YELLOW 2px solid;
+        left: 28px;
+        height: 16px;
+      }
+      // After border is now the actual border around the entire bar
+      // It'll do for this purpose
+      &::after {
+        border: $LYNX-YELLOW 1px solid;
+        width: 106px;
+        height: 14px;
+        left: -108px;
+      }
+    }
+
+    .progress-value {
+      height: 8px;
+      background-color: $LYNX-WARNING;
+    }
+  }
+}
